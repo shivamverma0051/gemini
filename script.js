@@ -10,8 +10,9 @@ let userMessage = null;
 let isResponseGenerating = false;
 
 // api configuration
-const API_KEY = "AIzaSyBcam6dNMt66jLPnCmdC4nAzMGW3WhhouU";
-const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
+const GEMINI_API_KEY = "AIzaSyCwQQzGezHPRKKQ5gtmhnZ09oTeDLBR70w";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+
 
 const loadLocalstorageData = () =>{
     const savedChats = localStorage.getItem("savedChats");
@@ -172,5 +173,3 @@ typingForm.addEventListener("submit", (e)=>{
     handleOutgoingChat();
 
 });
-
-
